@@ -12,6 +12,7 @@ class LoginForm extends StatefulWidget {
 class _LoginFormState extends State {
 
   var formkey = GlobalKey<FormState>();
+  bool showpass = true;
 
   @override
   Widget build(BuildContext context) {
@@ -47,15 +48,28 @@ class _LoginFormState extends State {
             Padding(
               padding: const EdgeInsets.all(20),
               child: TextFormField(
+                obscureText: showpass,
+                obscuringCharacter: '*',
                 decoration: InputDecoration(
                   hintText: "Enter Password",
                   labelText: "PASSWORD",
                   prefixIcon: const Icon(Icons.visibility_off),
-                  suffixIcon: const Icon(Icons.visibility_outlined),
+                  suffixIcon:  IconButton(onPressed: (){
+                    setState(() {
+                      if(showpass){
+                        showpass = false;
+                      }else{
+                        showpass = true;
+                      }
+                    });
+                  },
+                      icon: Icon(showpass == true ? Icons.visibility_off : Icons.visibility),
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                   )
                 ),
+
                 textInputAction: TextInputAction.done,
                 validator: (password){
                   if(password!.isEmpty || password.length < 6){
