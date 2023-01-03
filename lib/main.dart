@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:myappnov2/Listpage.dart';
+import 'package:myappnov2/gridview.dart';
 import 'package:myappnov2/homepage.dart';
 import 'package:myappnov2/login%20with%20validation.dart';
 
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3),(){Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ListPage()));
+    Timer(const Duration(seconds: 3),(){Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Gridvieww()));
     });
   }
   @override
