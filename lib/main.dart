@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:myappnov2/Gridview%20with%20count.dart';
 import 'package:myappnov2/Listpage.dart';
 import 'package:myappnov2/gridview.dart';
 import 'package:myappnov2/homepage.dart';
@@ -19,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3),(){Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Gridvieww()));
+    Timer(const Duration(seconds: 3),(){Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Grid_count()));
     });
   }
   @override
