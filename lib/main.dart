@@ -2,10 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:myappnov2/Gridview%20with%20count.dart';
+import 'package:myappnov2/Gridview%20with%20custom.dart';
+import 'package:myappnov2/Gridview%20with%20extent.dart';
 import 'package:myappnov2/Listpage.dart';
 import 'package:myappnov2/gridview.dart';
 import 'package:myappnov2/homepage.dart';
 import 'package:myappnov2/login%20with%20validation.dart';
+import 'package:myappnov2/stack%20demo.dart';
 
 void main() {
   runApp(MaterialApp(home: SplashScreen(),debugShowCheckedModeBanner: false,));
@@ -20,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3),(){Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Grid_count()));
+    Timer(const Duration(seconds: 3),(){Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Mystack()));
     });
   }
   @override
