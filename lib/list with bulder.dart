@@ -13,9 +13,9 @@ class List_with_Builder extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
    return Scaffold(
-     appBar: AppBar(
-       title: Text("Contact book"),
-     ),
+     //appBar: AppBar(
+       //title: Text("Contact book"),
+    // ),
      body: ListView.builder(
        itemCount: name.length,
          itemBuilder: (BuildContext context,index){
